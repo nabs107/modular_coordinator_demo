@@ -175,9 +175,13 @@ code_sign_if_enabled() {
 }
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/Dashboard/Dashboard.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Forex/Forex.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Login/Login.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/Dashboard/Dashboard.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Forex/Forex.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Login/Login.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then

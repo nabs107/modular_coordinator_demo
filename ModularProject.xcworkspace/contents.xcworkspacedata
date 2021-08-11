@@ -10,4 +10,10 @@
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:Modules/Dashboard/Example/Dashboard.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Modules/Forex/Example/Forex.xcodeproj">
+   </FileRef>
 </Workspace>

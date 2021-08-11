@@ -7,10 +7,20 @@ workspace 'ModularProject'
 
 def modularproject_pods
   login_pods
+  dashboard_pods
+  forex_pods
 end
 
 def login_pods
   pod 'Login', :path => 'Modules/Login'
+end
+
+def dashboard_pods
+  pod 'Dashboard', :path => 'Modules/Dashboard'
+end
+
+def forex_pods
+  pod 'Forex', :path => 'Modules/Forex'
 end
 
 target 'ModularProject' do
@@ -29,6 +39,26 @@ target 'Login_Example' do
 
   # Pods for Login
   project 'Modules/Login/Example/Login.xcodeproj'
+  login_pods
+
+end
+
+target 'Dashboard_Example' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Login
+  project 'Modules/Dashboard/Example/Dashboard.xcodeproj'
+  login_pods
+
+end
+
+target 'Forex_Example' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Login
+  project 'Modules/Forex/Example/Forex.xcodeproj'
   login_pods
 
 end

@@ -6,9 +6,14 @@
 //
 
 import UIKit
-import Login
+
+protocol ViewControllerCoordinatorDelegate: AnyObject {
+    func login()
+}
 
 class ViewController: UIViewController {
+    
+    public weak var viewControllerCoordinatorDelegate: ViewControllerCoordinatorDelegate?
 
     @IBOutlet weak var loginButton: UIButton!
     
@@ -20,8 +25,7 @@ class ViewController: UIViewController {
     
     @objc
     func loginButtonTapped(_ sender: UIButton) {
-        let viewController = LoginViewController()
-        navigationController?.pushViewController(viewController, animated: true)
+        viewControllerCoordinatorDelegate?.login()
     }
 }
 

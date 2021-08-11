@@ -1,0 +1,6 @@
+framework module Forex {
+  umbrella header "Forex-umbrella.h"
+
+  export *
+  module * { export * }
+}

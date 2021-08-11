@@ -1,16 +1,26 @@
 PODS:
+  - Dashboard (0.1.0)
+  - Forex (0.1.0)
   - Login (0.1.0)
 
 DEPENDENCIES:
+  - Dashboard (from `Modules/Dashboard`)
+  - Forex (from `Modules/Forex`)
   - Login (from `Modules/Login`)
 
 EXTERNAL SOURCES:
+  Dashboard:
+    :path: Modules/Dashboard
+  Forex:
+    :path: Modules/Forex
   Login:
     :path: Modules/Login
 
 SPEC CHECKSUMS:
+  Dashboard: 434191c4fa6ae75405613eabd0b7ecde14124c76
+  Forex: 188da06362023528f9c0f1d50203ff9877641e50
   Login: 2a5b687039ff9771c5f7145cd3847d03e47e9bfd
 
-PODFILE CHECKSUM: be6aa76f0db07b5639bfd041decba1fad198a62a
+PODFILE CHECKSUM: bd2e863e46ab087809c33200370f6ad4558602cf
 
 COCOAPODS: 1.10.1
